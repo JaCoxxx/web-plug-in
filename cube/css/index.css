@@ -16,9 +16,6 @@ html, body{
     width: 500px;
     height: 500px;
     background: radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .5) 100%);
-    background: -webkit-radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .5) 100%);
-    background: -o-radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .5) 100%);
-    background: -moz-radial-gradient(rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, .5) 100%);
     perspective: 500px;
 }
 
@@ -31,7 +28,7 @@ html, body{
     line-height: 100px;
     text-align: center;
     transform-style: preserve-3d;
-    animation: cubeRotating 6s linear 1s infinite;
+    /* animation: cubeRotating 6s linear 1s infinite; */
 }
 
 .item {
@@ -61,6 +58,119 @@ html, body{
 }
 .down {
     transform: translateY(50px) rotateX(-90deg);
+}
+
+.x-axis {
+    background: #000;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -1px;
+}
+
+.x-axis::before {
+    content: '>';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    right: -7px;
+    top: -9px;
+}
+
+.x-axis::after {
+    content: 'x';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    right: 4px;
+    top: -16px;
+}
+
+.y-axis {
+    background: #000;
+    width: 1px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -1px;
+}
+
+.y-axis::before {
+    content: '>';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    right: -8.5px;
+    bottom: -7px;
+    transform: rotateZ(90deg);
+}
+
+.y-axis::after {
+    content: 'y';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    right: -14px;
+    bottom: 6px;
+}
+
+.z-axis {
+    background: #000;
+    width: 200px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -100px;
+    margin-top: -1px;
+    transform: rotateY(90deg);
+}
+
+.z-axis::before {
+    content: '<';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    left: -8px;
+    top: -9px;
+}
+
+.z-axis::after {
+    content: 'z';
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    text-align: center;
+    left: 4px;
+    top: -16px;
 }
 
 
